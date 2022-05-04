@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/alicia/AndroidStudioProjects/Rufous/app/src/main/res/drawable/ic_baseline_addressbar.xml" value="0.1865" />
         <entry key="..\:/Users/alicia/AndroidStudioProjects/Rufous/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.184" />
-        <entry key="..\:/Users/alicia/AndroidStudioProjects/Rufous/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alicia/AndroidStudioProjects/Rufous/app/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>
     </option>
   </component>

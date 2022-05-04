@@ -80,7 +80,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // 이전 페이지 이동, 다음 페이지 이동, 새로고침
+        binding.goBack.setOnClickListener {
+            binding.webView.goBack()
+        }
 
+        binding.goForward.setOnClickListener {
+            binding.webView.goForward()
+        }
+
+        binding.refresh.setOnClickListener {
+            binding.webView.reload()
+        }
 
         binding.webView.loadUrl("http://www.kais.co.kr")
 
@@ -104,7 +115,5 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
-
-
 
 }
