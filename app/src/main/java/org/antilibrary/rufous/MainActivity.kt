@@ -69,18 +69,15 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     webChromeClient = WebChromeClient()
-                    // 주소 로딩
                     view.loadUrl(url)
                     return false
                 }
-                // 페이지 접속 마치면 호출되는 메소드
                 override fun onPageFinished(view: WebView, url: String) {
                     binding.urlEditText.setText(url)
                 }
             }
         }
 
-        // 이전 페이지 이동, 다음 페이지 이동, 새로고침
         binding.goBack.setOnClickListener {
             binding.webView.goBack()
         }
@@ -93,7 +90,7 @@ class MainActivity : AppCompatActivity() {
             binding.webView.reload()
         }
 
-        binding.webView.loadUrl("http://www.kais.co.kr")
+        binding.webView.loadUrl("http://www.google.co.kr")
 
         binding.urlEditText.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
