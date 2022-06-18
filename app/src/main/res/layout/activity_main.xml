@@ -41,9 +41,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:background="?attr/selectableItemBackground"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@id/webView"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toStartOf="@id/urlEditText"
         app:layout_constraintStart_toEndOf="@id/goForward"
@@ -55,9 +56,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/ic_baseline_addressbar"
         android:hint="http://www.kais.co.kr"
         android:imeOptions="actionSearch"
@@ -66,22 +67,57 @@
         android:maxLines="1"
         android:minHeight="48dp"
         android:paddingHorizontal="16dp"
-        android:textColorHint="#757575"
+        android:textColorHint="#455A64"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintBottom_toTopOf="@id/webView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/refresh"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/addBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/removeBookmark"
+        app:layout_constraintStart_toEndOf="@+id/urlEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_bookmark_add_24"
+        tools:layout_constraintEnd_toStartOf="@id/removeBookmark"
+        tools:layout_constraintStart_toEndOf="@id/urlEditText" />
+
+    <ImageView
+        android:id="@+id/removeBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/webView"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addBookmark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_bookmark_remove_24"
+        tools:layout_constraintStart_toEndOf="@id/urlEditText" />
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/refresh" />
+        app:layout_constraintTop_toBottomOf="@id/urlEditText">
+
+    </WebView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

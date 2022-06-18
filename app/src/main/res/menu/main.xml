@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    <item android:title="북마크" >
+        <menu >
+            <item
+                android:id="@+id/action_bookmark1"
+                android:title="북마크1" />
+        </menu>
+    </item>
+-->
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_bookmarks"
+        android:icon="@drawable/ic_baseline_bookmarks_24"
+        android:title="Bookmarks"
+        app:showAsAction="ifRoom" />
+</menu>
